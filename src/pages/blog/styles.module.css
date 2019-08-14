@@ -1,0 +1,30 @@
+.postWrapper {
+  margin: 5em 0;
+}
+
+.postWrapper h2 {
+  margin: 0.25em 0;
+  font-size: 2.5em;
+  font-family: var(--font-heading);
+}
+
+.postWrapper h2 a {
+  color: var(--gray-5);
+  text-decoration: none;
+}
+
+.postWrapper h2 a:hover {
+  color: var(--gray-4);
+}
+
+.postWrapper small {
+  font-size: 14px;
+  font-family: var(--font-heading);  
+}
+
+.postExcerpt {
+  padding: 0.25em 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: var(--font-text);
+}

@@ -1,10 +1,11 @@
+import '../../static/stylesheets/global.css';
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+
+import styles from './styles.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -19,38 +20,23 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <h1
-          style={{
-            marginTop: rhythm(1),
-            marginBottom: 0,
-          }}
+          className={styles.postTitle}
         >
           {post.frontmatter.title}
         </h1>
         <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-          }}
+          className={styles.postDate}
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
+        <div
+          className={styles.postContent}
+          dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <Bio />
+        <hr />
 
         <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+          className={styles.postNav}
         >
           <li>
             {previous && (
