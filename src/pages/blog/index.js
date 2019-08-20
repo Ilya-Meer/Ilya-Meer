@@ -27,7 +27,7 @@ class BlogIndex extends Component {
                   {title}
                 </Link>
               </h2>
-              <small>{node.frontmatter.date}</small>
+              <p className={styles.postDate}>{node.frontmatter.date}</p>
               <div className={styles.postExcerpt}>
                 <p
                   dangerouslySetInnerHTML={{

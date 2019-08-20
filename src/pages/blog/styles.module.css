@@ -3,7 +3,7 @@
 }
 
 .postWrapper h2 {
-  margin: 0.25em 0;
+  margin: 0.25em 0 0.2em 0;
   font-size: 2.5em;
   font-family: var(--font-heading);
 }
@@ -17,9 +17,10 @@
   color: var(--gray-4);
 }
 
-.postWrapper small {
-  font-size: 14px;
-  font-family: var(--font-heading);  
+.postDate {
+  font-family: var(--font-heading);
+  font-size: 0.875em;
+  margin-top: 0.5em;
 }
 
 .postExcerpt {

@@ -25,6 +25,14 @@
   position: relative;
 }
 
+.postPage.siteNav {
+  flex-direction: column;
+}
+
+.postPage .homeLink {
+  padding-bottom: 3rem;
+}
+
 .homeLink a {
   position: relative;
   padding: 5px 0;
@@ -88,5 +96,15 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media all and (min-width: 450px) {
+  .postPage .homeLink {
+    padding-bottom: 0;
+  }
+
+  .postPage.siteNav {
+    flex-direction: row;
   }
 }

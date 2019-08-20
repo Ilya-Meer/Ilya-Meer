@@ -12,8 +12,16 @@ const Header = (props) => {
   const isHomePage = location.pathname === '/'
   const isBlogPage = location.pathname === '/blog';
 
+  const isBlogPostPage = !isHomePage && !isBlogPage;
+
   const renderHeader = () => (
-    <nav className={classNames([styles.siteNav, isHomePage ? styles.homeNav : ''])}>
+    <nav className={
+      classNames([
+        styles.siteNav,
+        isHomePage ? styles.homeNav : '',
+        isBlogPostPage ? styles.postPage : ''
+      ])
+    }>
       {!isHomePage && (
         <div className={styles.homeLink}><Link to="/">Home</Link></div>
       )}
