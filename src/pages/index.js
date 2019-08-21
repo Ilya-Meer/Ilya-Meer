@@ -16,7 +16,7 @@ class Home extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Home Page" />
+        <SEO title="Home" />
         <div>
           <ThreeJSScene
             font={font}
