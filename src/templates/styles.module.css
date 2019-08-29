@@ -50,6 +50,10 @@ figcaption {
   border-left: 2px solid var(--steel-blue-light);
 }
 
+.postContent pre {
+  font-size: 0.8em;
+}
+
 .postNav {
   display: flex;
   flex-wrap: wrap;
@@ -61,12 +65,20 @@ figcaption {
 .postNav a {
   font-family: var(--font-heading);
   font-size: 1.125em;
-  color: var(--steel-blue);
+  color: var(--steel-blue-light);
   text-decoration: none;
+}
+
+.postNav a:hover {
+  color: var(--steel-blue);
 }
 
 @media all and (min-width: 800px) {
   main {
     width: auto;
+  }
+
+  .postContent pre {
+    font-size: 1em;
   }
 }
