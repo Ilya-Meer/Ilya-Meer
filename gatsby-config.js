@@ -55,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Ilya Meerovich`,
         short_name: `GatsbyJS`,
         start_url: `/blog`,
         background_color: `#ffffff`,

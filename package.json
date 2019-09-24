@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "ilya-meerovich",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A personal site for Ilya Meerovich powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Ilya Meerovich <ilya.meerov@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "classnames": "^2.2.6",
@@ -43,16 +40,12 @@
     "gh-pages": "^2.1.1",
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/Ilya-Meer/Ilya-Meer.github.io",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
