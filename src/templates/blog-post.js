@@ -1,7 +1,7 @@
 import '../../static/stylesheets/global.css';
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import italicize from "../utils/italicize";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
         <h1
           className={styles.postTitle}
         >
-          {post.frontmatter.title}
+          {italicize(post.frontmatter.title)}
         </h1>
         <p
           className={styles.postDate}

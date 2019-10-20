@@ -1,7 +1,8 @@
 import '../../../static/stylesheets/normalize.css';
 import '../../../static/stylesheets/global.css';
-import React, { Component } from 'react'
-import { Link, graphql } from "gatsby"
+import React, { Component } from 'react';
+import { Link, graphql } from "gatsby";
+import italicize from "../../utils/italicize";
 import SEO from '../../components/SEO';
 import Layout from '../../components/Layout';
 import styles from './styles.module.css';
@@ -18,15 +19,15 @@ class BlogIndex extends Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <div
+            <article
               key={node.fields.slug}
               className={styles.postWrapper}
             >
-              <h2>
+              <h1>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+                  {italicize(title)}
                 </Link>
-              </h2>
+              </h1>
               <p className={styles.postDate}>{node.frontmatter.date}</p>
               <div className={styles.postExcerpt}>
                 <p
@@ -35,7 +36,7 @@ class BlogIndex extends Component {
                   }}
                 />
               </div>
-            </div>
+            </article>
           )
         })}
       </Layout>
