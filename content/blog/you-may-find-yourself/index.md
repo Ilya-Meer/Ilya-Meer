@@ -1,16 +1,16 @@
 ---
 title: You may find yourself
-date: "2019-09-24T06:50:50.513Z"
-description: ""
+date: '2019-09-24T06:50:50.513Z'
+description: ''
 ---
 
 If you're reading this, the odds are pretty good that you've had the exquisite delight of travelling by airplane in North America. If you're taking economy like I am, then you've probably also had to interact with at least one airport employee who has challenged your understanding of the word 'disgruntled'. I'm often left scratching my head at just how conspicuously someone can hate their job.
 
 It's difficult to work in the service industry and find the motivation to deal with constant demands, caprices, and impulses that never seem to reckon with the real-world implications of what they're asking. It's even more difficult to exert the effort and think about how one got here and to take responsibility for ending up here, as if all of this drudgery could be one's own fault.
 
-And then, to make things worse, we're subject to the relentless imperative of our age of self-absorption, "Do what you love." 
+And then, to make things worse, we're subject to the relentless imperative of our age of self-absorption, "Do what you love."
 
-There's a sense in which it's obvious that this is good advice, we should all try make a living through something we enjoy, but it's doubtful that there are many people who can actually realize this. When your passion in life gets overrun with the mundane trappings of a real job - schedules, meetings, coworkers, financial considerations, time management, etc., the love doesn't seem to enter it into it anymore. 
+There's a sense in which it's obvious that this is good advice, we should all try make a living through something we enjoy, but it's doubtful that there are many people who can actually realize this. When your passion in life gets overrun with the mundane trappings of a real job - schedules, meetings, coworkers, financial considerations, time management, etc., the love doesn't seem to enter it into it anymore.
 
 On the other hand, passions and loves can revolve around just about anything, and circumstances do not always stoop to accommodate them. So what can be said for those who do the unlovable jobs that nobody else will? Who pass over the job they love out of consideration for money, time, commute, and so on? As Miya Tokumitsu [put it](https://www.jacobinmag.com/2014/01/in-the-name-of-love/), this mantra "disguises the fact that being able to choose a career primarily for personal reward is an unmerited privilege, a sign of that person’s socioeconomic class...It is the secret handshake of the privileged and a worldview that disguises its elitism as noble self-betterment."
 
@@ -24,17 +24,18 @@ As it turns out, you stand to gain a lot. Determinism can operate at different s
 
 We are constantly oscillating between believing in determinism and believing in free will. Here one can refer to the well-documented [self-serving bias](https://en.wikipedia.org/wiki/Self-serving_bias) - it's common to attribute our successes to our own actions, but our shortcomings to just about anything else. Not to mention the very activity of making plans for the future involves selecting between competing alternatives, as if we have some control over what we do. No matter what we say we believe, we behave as if we're free anyway. It's too convenient an illusion to do away with, and our societies reinforce it at every turn, for example by means of the idea that we are held morally responsible for crimes we commit, and so on.
 
-But there is the selectivity, the unconscious fumbling for absolution, groping for release, as reality resolves itself into an imposition - it was never up to us. We could take an interest and be a little more present, and allow others to reap the benefit of interactions with us, yet we invoke our eternal prerogative to be bored. And despite who we become when we embrace determinism, instead of choosing the destination, we continue finding ourselves in places, as the Talking Heads song goes. 
+But there is the selectivity, the unconscious fumbling for absolution, groping for release, as reality resolves itself into an imposition - it was never up to us. We could take an interest and be a little more present, and allow others to reap the benefit of interactions with us, yet we invoke our eternal prerogative to be bored. And despite who we become when we embrace determinism, instead of choosing the destination, we continue finding ourselves in places, as the Talking Heads song goes.
 
 Tokumitsu still makes another excellent point, though, in warning us about being a little too positive and loving our job a little too much. If we're told to contribute out of love, or because our skills can make a difference, we risk having others take advantage of us. Every software dev, for instance, has been the target of a recruitment effort, at one time or another, telling her to work as a "rockstar developer"...
+
 <figure style="text-align:center;">
   <a
-    href="https://pbs.twimg.com/media/DaKCjUvWkAEydXX?format=jpg&name=large"
+    href="https://i.imgur.com/33jUAIU.jpg"
     target="_blank"
     rel="noopener"
   >
     <img
-      src="https://pbs.twimg.com/media/DaKCjUvWkAEydXX?format=jpg&name=large"
+      src="https://i.imgur.com/33jUAIU.jpg"
       width="50%" 
       alt="Rockstar Developer comic"
       title="Rockstar Developer"
@@ -45,13 +46,13 @@ Tokumitsu still makes another excellent point, though, in warning us about being
 
 Having been sold a bill of goods, we are living in an era "[seeing] the rise of the adjunct professor and the unpaid intern — people persuaded to work for cheap or free, or even for a net loss of wealth."
 
-This is undoubtedly a valuable perspective. As Tokumitsu says, we should know what we're getting ourselves into and demand fair treatment from those who would "[disguise] our own labor to ourselves" and eat off of it. 
+This is undoubtedly a valuable perspective. As Tokumitsu says, we should know what we're getting ourselves into and demand fair treatment from those who would "[disguise] our own labor to ourselves" and eat off of it.
 
 But the questions she encourages us to pose, “Why should workers feel as if they aren’t working when they are?” “Who, exactly, benefits from making work feel like non-work?” can have more than one answer. It's true that we're vulnerable if we allow ourselves to work for the love of the thing without thinking critically about our situation. But to a large extent, the party that really benefits from making work feel like non-work, is us. Regardless of what we do, work makes up a tremendous portion of what we do with our time. It doesn't have to define who we are, but for most of us, it is undeniably where our time goes, it is life. If we are determined to create lasting meaning over the course of our lifetime, then it's up to us to find a way to acknowledge our ownership of the time that we spend working, to see working moments as something more than just time wasted, to see them as made of the same substance - and therefore just as precious - as the vertiginous peaks of our existence.
 
 <br />
 
-----
+---
 
 <div style="word-break: break-word;">
 

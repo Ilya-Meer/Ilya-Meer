@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Ilya Meerovich - Just a dev from Vancouver.`,
     author: `Ilya Meerovich`,
-    description: `A website / blog belonging to Ilya Meerovich.`,
+    description: `Personal site - Ilya Meerovich.`,
     siteUrl: `http://ilyameerovich.com/`,
   },
   plugins: [
@@ -67,4 +67,4 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
-}
+};

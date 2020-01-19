@@ -1,18 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO"
-import ThreeJSScene from "../components/ThreeJSScene"
-import font from '../../static/assets/fonts/raleway_im.json'
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import ThreeJSScene from '../components/ThreeJSScene';
+import font from '../../static/assets/fonts/raleway_im.json';
 
 class Home extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    const { data } = this.props;
+    const siteTitle = data.site.siteMetadata.title;
 
-    const displayText = "IM";
-    const color = 0x293749; 
+    const displayText = 'IM';
+    const color = 0x293749;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -26,11 +26,11 @@ class Home extends React.Component {
           />
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;
 
 export const pageQuery = graphql`
   query {
@@ -40,4 +40,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
