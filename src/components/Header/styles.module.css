@@ -1,9 +1,10 @@
-
 /* generic navigation styles */
 
 .siteNav {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
   align-items: center;
   width: 80%;
   margin: 0 auto;
@@ -38,7 +39,8 @@
   padding: 5px 0;
 }
 
-.siteNav li::before, .homeLink a::before {
+.siteNav li::before,
+.homeLink a::before {
   content: '';
   height: 2px;
   width: 55%;
@@ -49,10 +51,11 @@
   display: block;
   background-color: var(--gray-3);
   opacity: 0;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.siteNav li:hover::before, .homeLink a:hover::before {
+.siteNav li:hover::before,
+.homeLink a:hover::before {
   content: '';
   height: 2px;
   width: 55%;
@@ -61,7 +64,7 @@
   display: block;
   background-color: var(--gray-3);
   opacity: 1;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .siteNav a {
