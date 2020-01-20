@@ -2,8 +2,8 @@ import '../../static/stylesheets/global.css';
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import italicize from '../utils/italicize';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 import styles from './styles.module.css';
 

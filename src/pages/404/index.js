@@ -1,7 +1,7 @@
 import '../../../static/stylesheets/normalize.css';
 import '../../../static/stylesheets/global.css';
 import React, { Component, Fragment } from 'react';
-import ThreeJSScene from '../../components/ThreeJSScene';
+import Scene from '../../components/ThreeJSScene';
 import SEO from '../../components/SEO';
 import Header from '../../components/Header';
 import font from '../../../static/assets/fonts/raleway_404.json';
@@ -12,7 +12,7 @@ class NotFoundPage extends Component {
     const { location } = this.props;
 
     const displayText = '404';
-    const color = 0x000;
+    const colour = 0x000;
     const size = 75;
 
     return (
@@ -26,11 +26,12 @@ class NotFoundPage extends Component {
             Try one of the links above.
           </p>
         </div>
-        <ThreeJSScene
+        <Scene
           font={font}
           displayText={displayText}
-          color={color}
+          colour={colour}
           size={size}
+          style={{ position: 'absolute' }}
         />
       </Fragment>
     );

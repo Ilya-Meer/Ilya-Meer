@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import ThreeJSScene from '../components/ThreeJSScene';
+import Scene from '../components/ThreeJSScene';
 import font from '../../static/assets/fonts/raleway_im.json';
 
 class Home extends React.Component {
@@ -12,16 +12,16 @@ class Home extends React.Component {
     const siteTitle = data.site.siteMetadata.title;
 
     const displayText = 'IM';
-    const color = 0x293749;
+    const colour = 0x293749;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Home" />
         <div>
-          <ThreeJSScene
+          <Scene
             font={font}
             displayText={displayText}
-            color={color}
+            colour={colour}
             size={200}
           />
         </div>
