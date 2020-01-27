@@ -1,32 +1,24 @@
-import '../../../static/stylesheets/normalize.css';
-import '../../../static/stylesheets/global.css';
-import React, { Fragment } from 'react';
-import classNames from 'classnames';
-import styles from './styles.module.css';
-
+import React, { Fragment, useContext } from 'react';
 import Header from '../Header';
+import { BodyWrapper, Footer } from './style';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
-class Layout extends React.Component {
-  render() {
-    const { children, location } = this.props;
+const Layout = ({ children, location }) => {
+  const { fonts } = useContext(ThemeContext);
+  const isHomePage = location.pathname === '/';
 
-    const isHomePage = location.pathname === '/';
-
-    return (
-      <Fragment>
-        <Header location={location} />
-        <main className={classNames({ [styles.homePage]: isHomePage })}>
-          {children}
-        </main>
-        {!isHomePage && (
-          <footer>
-            © {new Date().getFullYear()}.{` `}
-            Ilya Meerovich
-          </footer>
-        )}
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <Header location={location} />
+      <BodyWrapper isHomePage={isHomePage}>{children}</BodyWrapper>
+      {!isHomePage && (
+        <Footer fonts={fonts}>
+          © {new Date().getFullYear()}.{` `}
+          Ilya Meerovich
+        </Footer>
+      )}
+    </Fragment>
+  );
+};
 
 export default Layout;

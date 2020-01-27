@@ -6,29 +6,27 @@ import SEO from '../components/SEO';
 import Scene from '../components/ThreeJSScene';
 import font from '../../static/assets/fonts/raleway_im.json';
 
-class Home extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+const Home = props => {
+  const { data } = props;
+  const siteTitle = data.site.siteMetadata.title;
 
-    const displayText = 'IM';
-    const colour = 0x293749;
+  const displayText = 'IM';
+  const colour = 0x293749;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Home" />
-        <div>
-          <Scene
-            font={font}
-            displayText={displayText}
-            colour={colour}
-            size={200}
-          />
-        </div>
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout location={props.location} title={siteTitle}>
+      <SEO title="Home" />
+      <div>
+        <Scene
+          font={font}
+          displayText={displayText}
+          colour={colour}
+          size={200}
+        />
+      </div>
+    </Layout>
+  );
+};
 
 export default Home;
 

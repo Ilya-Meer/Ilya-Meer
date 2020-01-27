@@ -55,16 +55,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ilya Meerovich`,
-        short_name: `GatsbyJS`,
-        start_url: `/blog`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        name: `Ilya Meerovich's Site`,
+        short_name: `Ilya's Site`,
+        description: `Ilya's Blog`,
+        lang: `en`,
+        start_url: `/`,
         icon: `content/assets/favicon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
 };

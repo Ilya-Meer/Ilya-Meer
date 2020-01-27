@@ -1,15 +1,10 @@
 import React from 'react';
-import { Canvas } from 'react-three-fiber';
+import { StyledCanvas } from './style';
 import TextMesh from './TextMesh';
-import styles from './styles.module.css';
 
-const Scene = ({ colour, size, displayText, font, style }) => {
+const Scene = ({ colour, size, displayText, font }) => {
   return (
-    <Canvas
-      className={styles.canvas}
-      camera={{ position: [0, 0, 50] }}
-      style={{ width: '100vw', height: '100vh', ...style }}
-    >
+    <StyledCanvas camera={{ position: [0, 0, 50] }}>
       <ambientLight color={0xffffff} intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={0.75} />
       <TextMesh
@@ -18,7 +13,7 @@ const Scene = ({ colour, size, displayText, font, style }) => {
         displayText={displayText}
         JSONfont={font}
       />
-    </Canvas>
+    </StyledCanvas>
   );
 };
 

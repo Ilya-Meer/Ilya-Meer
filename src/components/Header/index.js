@@ -1,10 +1,17 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import classNames from 'classnames';
+import React, { useContext } from 'react';
 
-import styles from './styles.module.css';
+import { ThemeContext } from '../../contexts/ThemeContext';
+
+import {
+  Nav,
+  LinkList,
+  InternalLink,
+  StyledLink,
+  HomeLinkWrapper,
+} from './style';
 
 const Header = props => {
+  const { colours, fonts } = useContext(ThemeContext);
   const { location } = props;
 
   const isHomePage = location.pathname === '/';
@@ -13,44 +20,46 @@ const Header = props => {
   const isBlogPostPage = !isHomePage && !isBlogPage;
 
   const renderHeader = () => (
-    <nav
-      className={classNames([
-        styles.siteNav,
-        isHomePage ? styles.homeNav : '',
-        isBlogPostPage ? styles.postPage : '',
-      ])}
-    >
+    <Nav isHomePage={isHomePage} isBlogPostPage={isBlogPostPage}>
       {!isHomePage && (
-        <div className={styles.homeLink}>
-          <Link to="/">Home</Link>
-        </div>
+        <HomeLinkWrapper isBlogPostPage={isBlogPostPage}>
+          <InternalLink fonts={fonts} colours={colours} to="/">
+            Home
+          </InternalLink>
+        </HomeLinkWrapper>
       )}
-      <ul>
+      <LinkList>
         {!isBlogPage && (
           <li>
-            <Link to="/blog">Blog</Link>
+            <InternalLink fonts={fonts} colours={colours} to="/blog">
+              Blog
+            </InternalLink>
           </li>
         )}
         <li>
-          <a
+          <StyledLink
+            colours={colours}
+            fonts={fonts}
             href="https://github.com/Ilya-Meer/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
-          </a>
+          </StyledLink>
         </li>
         <li>
-          <a
+          <StyledLink
+            colours={colours}
+            fonts={fonts}
             href="https://www.linkedin.com/in/ilya-meerovich/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
-          </a>
+          </StyledLink>
         </li>
-      </ul>
-    </nav>
+      </LinkList>
+    </Nav>
   );
 
   return (

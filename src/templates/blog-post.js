@@ -1,53 +1,51 @@
-import '../../static/stylesheets/global.css';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, graphql } from 'gatsby';
 import italicize from '../utils/italicize';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import { Heading, PostDate, PostContent, PostNav } from './style';
+import { ThemeContext } from '../contexts/ThemeContext';
 
-import styles from './styles.module.css';
+const BlogPostTemplate = props => {
+  const { colours, fonts } = useContext(ThemeContext);
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+  const post = props.data.markdownRemark;
+  const siteTitle = props.data.site.siteMetadata.title;
+  const { previous, next } = props.pageContext;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <h1 className={styles.postTitle}>
-          {italicize(post.frontmatter.title)}
-        </h1>
-        <p className={styles.postDate}>{post.frontmatter.date}</p>
-        <div
-          className={styles.postContent}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-        <hr />
-        <ul className={styles.postNav}>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {italicize(previous.frontmatter.title)}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {italicize(next.frontmatter.title)} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout location={props.location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <Heading fonts={fonts}>{italicize(post.frontmatter.title)}</Heading>
+      <PostDate fonts={fonts}>{post.frontmatter.date}</PostDate>
+      <PostContent
+        colours={colours}
+        fonts={fonts}
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
+      <hr />
+      <PostNav fonts={fonts} colours={colours}>
+        <li>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {italicize(previous.frontmatter.title)}
+            </Link>
+          )}
+        </li>
+        <li>
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {italicize(next.frontmatter.title)} →
+            </Link>
+          )}
+        </li>
+      </PostNav>
+    </Layout>
+  );
+};
 
 export default BlogPostTemplate;
 
