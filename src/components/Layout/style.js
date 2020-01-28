@@ -11,10 +11,13 @@ export const BodyWrapper = styled.main`
 `;
 
 export const Footer = styled.footer`
+  display: flex;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
   padding: 1rem 0;
   font-family: ${({ fonts }) => fonts.heading};
+  color: ${({ colours }) => colours.textContent};
   @media all and (min-width: 800px) {
     max-width: 42rem;
   }

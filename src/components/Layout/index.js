@@ -2,19 +2,38 @@ import React, { Fragment, useContext } from 'react';
 import Header from '../Header';
 import { BodyWrapper, Footer } from './style';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import useBodyToggle from '../../utils/useBodyToggle';
+import ThemeToggle from '../ThemeToggle';
 
 const Layout = ({ children, location }) => {
-  const { fonts } = useContext(ThemeContext);
+  const {
+    theme: { colours },
+    fonts,
+    darkEnabled,
+    setDarkEnabled,
+  } = useContext(ThemeContext);
+
+  useBodyToggle(colours);
+
   const isHomePage = location.pathname === '/';
 
   return (
     <Fragment>
       <Header location={location} />
-      <BodyWrapper isHomePage={isHomePage}>{children}</BodyWrapper>
+      <BodyWrapper colours={colours} isHomePage={isHomePage}>
+        {children}
+      </BodyWrapper>
       {!isHomePage && (
-        <Footer fonts={fonts}>
-          © {new Date().getFullYear()}.{` `}
-          Ilya Meerovich
+        <Footer colours={colours} fonts={fonts}>
+          <span>
+            © {new Date().getFullYear()}.{` `}
+            Ilya Meerovich
+          </span>
+          <ThemeToggle
+            colours={colours}
+            darkEnabled={darkEnabled}
+            setDarkEnabled={setDarkEnabled}
+          />
         </Footer>
       )}
     </Fragment>

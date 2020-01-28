@@ -14,6 +14,7 @@ const PostDate = styled.p`
   font-family: ${({ fonts }) => fonts.heading};
   font-size: 0.875em;
   margin-top: 0.5em;
+  color: ${({ colours }) => colours.textContent};
 `;
 
 const PostExcerpt = styled.div`
@@ -21,6 +22,7 @@ const PostExcerpt = styled.div`
   font-size: 18px;
   line-height: 24px;
   font-family: ${({ fonts }) => fonts.text};
+  color: ${({ colours }) => colours.textContent};
 `;
 
 const Heading = styled.h1`
@@ -30,15 +32,18 @@ const Heading = styled.h1`
 `;
 
 const HeadingLink = styled(Link)`
-  color: ${({ colours }) => colours.gray5};
+  color: ${({ colours }) => colours.postTitle};
   text-decoration: none;
   &:hover {
-    color: ${({ colours }) => colours.gray4};
+    color: ${({ colours }) => colours.postTitleHover};
   }
 `;
 
 const BlogIndex = props => {
-  const { colours, fonts } = useContext(ThemeContext);
+  const {
+    theme: { colours },
+    fonts,
+  } = useContext(ThemeContext);
 
   const { data, location } = props;
   const siteTitle = data.site.siteMetadata.title;
@@ -56,8 +61,10 @@ const BlogIndex = props => {
                 {italicize(title)}
               </HeadingLink>
             </Heading>
-            <PostDate fonts={fonts}>{node.frontmatter.date}</PostDate>
-            <PostExcerpt fonts={fonts}>
+            <PostDate colours={colours} fonts={fonts}>
+              {node.frontmatter.date}
+            </PostDate>
+            <PostExcerpt colours={colours} fonts={fonts}>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,

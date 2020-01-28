@@ -7,7 +7,7 @@ const LinkStyles = css`
   font-family: ${({ fonts }) => fonts.text};
   font-size: 20px;
   font-weight: 300;
-  color: ${({ colours }) => colours.gray5};
+  color: ${({ colours }) => colours.navLink};
 `;
 
 const LinkPseudo = css`
@@ -20,7 +20,7 @@ const LinkPseudo = css`
   transform: translate(-50%);
   display: block;
   background-color: red;
-  background-color: ${({ colours }) => colours.gray3};
+  background-color: ${({ colours }) => colours.navLinkHover};
   opacity: 0;
   transition: all 0.2s ease-in-out;
 `;
@@ -32,7 +32,7 @@ const LinkPseudoHover = css`
   position: absolute;
   bottom: -5px;
   display: block;
-  background-color: ${({ colours }) => colours.gray3};
+  background-color: ${({ colours }) => colours.navLinkHover};
   opacity: 1;
   transition: all 0.2s linear;
 `;
@@ -59,12 +59,13 @@ export const Nav = styled.nav`
   position: relative;
   z-index: 10;
   align-items: center;
-  width: 80%;
+  width: ${({ isHomePage }) => (isHomePage ? '100%' : '80%')};
   margin: 0 auto;
   padding: 2em 0 0 0;
   opacity: ${({ isHomePage }) => (isHomePage ? 0 : 1)};
   animation: ${({ isHomePage }) => (isHomePage ? animationMixin : 'none')};
   @media all and (min-width: 450px) {
+    width: 80%;
     flex-direction: row;
   }
 `;

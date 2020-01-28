@@ -30,12 +30,11 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
+    "react-svg-morph": "^0.2.1",
     "react-three-fiber": "^4.0.12",
     "react-use-gesture": "^6.0.14",
     "styled-components": "^4.4.1",
-    "three": "^0.107.0",
-    "three-trackballcontrols": "0.0.8",
-    "threejs-controls": "^1.0.6"
+    "three": "^0.107.0"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",

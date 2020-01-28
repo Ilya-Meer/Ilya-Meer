@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 import {
@@ -11,7 +10,13 @@ import {
 } from './style';
 
 const Header = props => {
-  const { colours, fonts } = useContext(ThemeContext);
+  const {
+    theme: { colours },
+    fonts,
+    darkEnabled,
+    setDarkEnabled,
+  } = useContext(ThemeContext);
+
   const { location } = props;
 
   const isHomePage = location.pathname === '/';

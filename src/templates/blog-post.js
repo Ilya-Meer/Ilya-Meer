@@ -7,7 +7,10 @@ import { Heading, PostDate, PostContent, PostNav } from './style';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 const BlogPostTemplate = props => {
-  const { colours, fonts } = useContext(ThemeContext);
+  const {
+    theme: { colours },
+    fonts,
+  } = useContext(ThemeContext);
 
   const post = props.data.markdownRemark;
   const siteTitle = props.data.site.siteMetadata.title;
@@ -19,8 +22,12 @@ const BlogPostTemplate = props => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Heading fonts={fonts}>{italicize(post.frontmatter.title)}</Heading>
-      <PostDate fonts={fonts}>{post.frontmatter.date}</PostDate>
+      <Heading colours={colours} fonts={fonts}>
+        {italicize(post.frontmatter.title)}
+      </Heading>
+      <PostDate colours={colours} fonts={fonts}>
+        {post.frontmatter.date}
+      </PostDate>
       <PostContent
         colours={colours}
         fonts={fonts}
