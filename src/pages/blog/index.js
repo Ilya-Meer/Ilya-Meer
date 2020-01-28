@@ -1,50 +1,84 @@
-import '../../../static/stylesheets/normalize.css';
-import '../../../static/stylesheets/global.css';
-import React, { Component } from 'react';
-import { Link, graphql } from "gatsby";
-import italicize from "../../utils/italicize";
+import React, { useContext } from 'react';
+import { graphql, Link } from 'gatsby';
+import italicize from '../../utils/italicize';
 import SEO from '../../components/SEO';
 import Layout from '../../components/Layout';
-import styles from './styles.module.css';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import styled from 'styled-components';
 
-class BlogIndex extends Component {
-  render() {
-    const { data, location } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+const Article = styled.article`
+  margin: 5em 0;
+`;
 
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article
-              key={node.fields.slug}
-              className={styles.postWrapper}
-            >
-              <h1>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {italicize(title)}
-                </Link>
-              </h1>
-              <p className={styles.postDate}>{node.frontmatter.date}</p>
-              <div className={styles.postExcerpt}>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
-            </article>
-          )
-        })}
-      </Layout>
-    )
+const PostDate = styled.p`
+  font-family: ${({ fonts }) => fonts.heading};
+  font-size: 0.875em;
+  margin-top: 0.5em;
+  color: ${({ colours }) => colours.textContent};
+`;
+
+const PostExcerpt = styled.div`
+  padding: 0.25em 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: ${({ fonts }) => fonts.text};
+  color: ${({ colours }) => colours.textContent};
+`;
+
+const Heading = styled.h1`
+  margin: 0.25em 0 0.2em 0;
+  font-size: 2.5em;
+  font-family: ${({ fonts }) => fonts.heading};
+`;
+
+const HeadingLink = styled(Link)`
+  color: ${({ colours }) => colours.postTitle};
+  text-decoration: none;
+  &:hover {
+    color: ${({ colours }) => colours.postTitleHover};
   }
-}
+`;
 
-export default BlogIndex
+const BlogIndex = props => {
+  const {
+    theme: { colours },
+    fonts,
+  } = useContext(ThemeContext);
+
+  const { data, location } = props;
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
+
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="All posts" />
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug;
+        return (
+          <Article key={node.fields.slug}>
+            <Heading fonts={fonts}>
+              <HeadingLink colours={colours} to={node.fields.slug}>
+                {italicize(title)}
+              </HeadingLink>
+            </Heading>
+            <PostDate colours={colours} fonts={fonts}>
+              {node.frontmatter.date}
+            </PostDate>
+            <PostExcerpt colours={colours} fonts={fonts}>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </PostExcerpt>
+          </Article>
+        );
+      })}
+    </Layout>
+  );
+};
+
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -69,4 +103,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

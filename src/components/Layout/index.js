@@ -1,32 +1,44 @@
-import '../../../static/stylesheets/normalize.css';
-import '../../../static/stylesheets/global.css';
-import React, { Fragment } from 'react';
-import classNames from 'classnames';
-import styles from './styles.module.css';
-
+import React, { Fragment, useContext } from 'react';
 import Header from '../Header';
+import { BodyWrapper, Footer } from './style';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import useBodyToggle from '../../utils/useBodyToggle';
+import ThemeToggle from '../ThemeToggle';
 
-class Layout extends React.Component {
-  render() {
-    const { children, location } = this.props;
+const Layout = ({ children, location }) => {
+  const {
+    theme: { colours },
+    fonts,
+    darkEnabled,
+    setDarkEnabled,
+  } = useContext(ThemeContext);
 
-    const isHomePage = location.pathname === '/';
+  useBodyToggle(colours);
 
-    return (
-      <Fragment>
-        <Header location={location} />
-        <main className={classNames({ [styles.homePage]: isHomePage })}>
-          {children}
-        </main>
-        {!isHomePage && (
-          <footer>
+  const isHomePage = location.pathname === '/';
+
+  return (
+    <Fragment>
+      <Header location={location} />
+      <BodyWrapper colours={colours} isHomePage={isHomePage}>
+        {children}
+      </BodyWrapper>
+      {!isHomePage && (
+        <Footer colours={colours} fonts={fonts}>
+          <span>
             © {new Date().getFullYear()}.{` `}
             Ilya Meerovich
-          </footer>
-        )}
-      </Fragment>
-    );
-  }
-}
+          </span>
+          <ThemeToggle
+            colour={colours.textContent}
+            darkEnabled={darkEnabled}
+            setDarkEnabled={setDarkEnabled}
+            style={{ top: '0' }}
+          />
+        </Footer>
+      )}
+    </Fragment>
+  );
+};
 
 export default Layout;
