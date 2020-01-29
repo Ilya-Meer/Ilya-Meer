@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import Header from '../Header';
-import { BodyWrapper, Footer } from './style';
+import { Anchor, BodyWrapper, IconWrapper, Footer } from './style';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import useBodyToggle from '../../utils/useBodyToggle';
 import ThemeToggle from '../ThemeToggle';
@@ -29,12 +29,22 @@ const Layout = ({ children, location }) => {
             © {new Date().getFullYear()}.{` `}
             Ilya Meerovich
           </span>
-          <ThemeToggle
-            colour={colours.textContent}
-            darkEnabled={darkEnabled}
-            setDarkEnabled={setDarkEnabled}
-            style={{ top: '0' }}
-          />
+          <IconWrapper>
+            <ThemeToggle
+              colour={colours.textContent}
+              darkEnabled={darkEnabled}
+              setDarkEnabled={setDarkEnabled}
+              style={{ top: '0', margin: '0 20px' }}
+            />
+            <Anchor
+              target="_blank"
+              rel="noopener noreferrer"
+              colours={colours}
+              href="https://github.com/Ilya-Meer/Ilya-Meer"
+            >
+              src
+            </Anchor>
+          </IconWrapper>
         </Footer>
       )}
     </Fragment>

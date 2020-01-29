@@ -6,7 +6,12 @@ const ThemeToggle = ({ darkEnabled, setDarkEnabled, colour, style }) => {
   if (darkEnabled) {
     return (
       <Fire
-        style={{ position: 'relative', top: '2px', ...style }}
+        style={{
+          position: 'relative',
+          top: '2px',
+          cursor: 'pointer',
+          ...style,
+        }}
         colour={colour}
         onClick={() => {
           setDarkEnabled(!darkEnabled);
@@ -16,7 +21,7 @@ const ThemeToggle = ({ darkEnabled, setDarkEnabled, colour, style }) => {
   }
   return (
     <Water
-      style={{ position: 'relative', top: '2px', ...style }}
+      style={{ position: 'relative', top: '2px', cursor: 'pointer', ...style }}
       colour={colour}
       onClick={() => {
         setDarkEnabled(!darkEnabled);

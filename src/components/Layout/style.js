@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const Anchor = styled.a`
+  margin: 0 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${({ colours }) => colours.textContent};
+  cursor: pointer;
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const BodyWrapper = styled.main`
   width: 80%;
   max-width: ${({ isHomePage }) => (isHomePage ? 'none' : '42rem')};
@@ -16,7 +29,7 @@ export const Footer = styled.footer`
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1.75rem 0;
   font-family: ${({ fonts }) => fonts.heading};
   color: ${({ colours }) => colours.textContent};
   @media all and (min-width: 800px) {
