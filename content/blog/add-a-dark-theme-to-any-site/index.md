@@ -111,12 +111,12 @@ javascript: (function() {
 
 ## Optimizing
 
-Things are looking pretty good. Most simple blog sites will succumb to our bookmarklet. Yet, strangely enough, Medium, of all platforms, doesn't afford a dark mode for those browsing the desktop version of the site. This seems like one case we would want to handle, but our current code only affects the text colour, not the background colour.
+Things are looking pretty good. Most simple blog sites will succumb to the awesome power of our bookmarklet. Yet, strangely enough, Medium, of all platforms, doesn't afford a dark mode for those browsing the desktop version of the site. This seems like one case we would want to handle, but if we venture over to Medium, we'll see that our current code only affects the text colour, not the background colour.
 
-As I alluded earlier, in the case of Medium, the white background is not the `body` tag, but another div,
-`<div class="n p">`. There are many of these divs on the page, it turns out.
+As I alluded earlier, in the case of Medium, the white background is not part of the `body` tag, but another div,
+`<div class="n p">`. There are many elements of with these class names on the page, it turns out. So a single call to `document.querySelector` won't hack it.
 
-So we could add another loop...
+To solve this, we could add another loop...
 
 ```javascript
 document
@@ -147,7 +147,7 @@ function changeBackgroundColour() {
 }
 ```
 
-This gets us Medium, but not Wikipedia as the width of the container of the article is less than 95% of the viewport width. The inspector tells me that the width of the container relative to the window is 0.84, so if we adjust the value to 85%, we get Wikipedia, too. Combining everything we've got so far gives us:
+This gets us Medium, but not Wikipedia as the width of the container of the article is less than 95% of the viewport width. Turning to Wikipedia now, the element inspector tells me that the width of the article's container div relative to the window is 0.84, so if we adjust the value to 85%, we get Wikipedia, too. Combining everything we've got so far gives us:
 
 ```javascript
 javascript: (function() {
@@ -202,11 +202,11 @@ javascript: (function() {
 
 ## Wrapping Up
 
-There's nothing really wrong with keeping all of the code we've written directly in the bookmark. But it's less than ideal for iteration if we have to go copy/paste the code into the bookmark every time. A better approach would be to host the source of the bookmark somewhere else. In this case all we keep in the bookmarklet is some driver code to create a script element on the page, fetch the source of our dark theme and add it as the `src` attribute of our script, then append it to the document to be run.
+There's nothing really wrong with keeping all of the code we've written directly in the bookmark. But it's less than ideal for iteration if we have to go copy/paste the code into the bookmark every time. A better approach would be to host the source of the bookmark somewhere else. In that case, all we keep in the bookmarklet is some driver code to create a script element on the page, set the `src` attribute of our script to wherever our dark theme is hosted, then append the script element to the document to be run.
 
 This does require us to be able to host our javascript files somewhere, so there is an extra step, but ultimately it is a cleaner solution.
 
-The final version of our bookmarklet looks like this - of course, replace the domain with your own if you're - where the URL below will just serve up the IFFE we wrote above.
+The final version of our bookmarklet looks like this - of course, replace the domain with your own - where the URL below will just serve up the IFFE we wrote above.
 
 ```javascript
 javascript: (function() {

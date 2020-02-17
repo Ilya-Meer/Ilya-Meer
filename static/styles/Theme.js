@@ -10,7 +10,8 @@ const themes = {
       postTitle: '#313131',
       postTitleHover: '#767676',
       textContent: '#111111',
-      pageBackground: '#ffffff'
+      pageBackground: '#ffffff',
+      codeElBackground: '#e5e5e5'
     },
   },
   darkTheme: {
@@ -24,7 +25,8 @@ const themes = {
       postTitle: '#e14594',
       postTitleHover: '#fe74ba',
       textContent: '#e0e0e0',
-      pageBackground: '#121212'
+      pageBackground: '#121212',
+      codeElBackground: '#333333'
     },
   },
   fonts: {

@@ -18,10 +18,17 @@ export const PostDate = styled.p`
 export const PostContent = styled.div`
   font-size: 18px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 25px;
   font-family: ${({ fonts }) => fonts.text};
 
+  h2,
   h3,
+  h4,
+  h5,
+  h6 {
+    color: ${({ colours }) => colours.postTitle};
+  }
+
   p,
   li,
   figcaption,
@@ -43,10 +50,23 @@ export const PostContent = styled.div`
   }
 
   pre {
+    border-radius: 5px;
     font-size: 0.8em;
     @media all and (min-width: 800px) {
       font-size: 1em;
     }
+  }
+
+  pre.language-javascript {
+    font-size: 16px;
+  }
+
+  code[class*='language-text'] {
+    padding: 0 4px;
+    border-radius: 2px;
+    font-size: 16px;
+    color: ${({ colours }) => colours.textContent};
+    background: ${({ colours }) => colours.codeElBackground};
   }
 
   img {
