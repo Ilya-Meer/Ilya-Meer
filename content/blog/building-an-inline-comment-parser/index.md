@@ -165,6 +165,23 @@ const parsed = parser('./sampleData/*.js');
 // ]
 ```
 
+---
+
+_Edit May 30th: the `for` loop above that iterates over concatenated comments should look like this instead:_
+
+```js
+for (let comment of concatenated) {
+  parsedComments.push({
+    file,
+    comments: comment,
+  });
+}
+```
+
+_End edit_
+
+---
+
 Although this utility can give us enough to detect the information we want, it would be great if we could add some context.
 
 In most IDEs, if you hover over some identifier that's been annotated with a doc comment, you'll get some information about that identifier that has been extracted from the comment. This ability to link comments with the thing they describe is a really nice feature. We're going to implement a version of this by using a parser combinator.
@@ -261,7 +278,7 @@ const varDeclaration = sequenceOf([
 }));
 ```
 
-In the above code, `identiferName` is a parser that looks for what we've decided are all valid characters inside of an identifier name.
+In the above code, `identifierName` is a parser that looks for what we've decided are all valid characters inside of an identifier name.
 
 The `varDeclaration` parser will attempt to parse a string consisting of:
 
@@ -274,9 +291,11 @@ Then, we apply a map function to format the resulting output to something more r
 
 Note, this map function is not the regular JavaScript `map`, but rather a [function](https://github.com/francisrstokes/arcsecond/blob/67efddd3e11734e0c0544e6ad41cbf362fef1027/index.mjs#L79) that takes the result of applying the parser, and returns another parser whose state has been modified by the callback we give it.
 
-If we wanted to parse different kinds of identifier declarations, like functions, we could write separate parsers for them, and then simply combine them using `choice`.
+Also note, if we wanted to parse different kinds of identifier declarations, like function declarations, we could write separate parsers for them, and then simply combine them using `choice`.
 
-Since we know the line number of the last inline comment we parsed in a given sequence, we just need to check the next line number in the file to see if it contains a declaration. If it does, we'll extract it, if not, we'll do nothing. Our function will take the comment object and the `lines` array of lines in the file.
+But where to look for the identifier?
+
+Well, since we know the line number of the last inline comment we parsed in a given sequence, we just need to check the next line number in the file to see if it contains a declaration. If it does, we'll extract it, if not, we'll do nothing. Our function will take the comment object and the `lines` array of lines in the file.
 
 ```js
 const getIdentifierInfo = (comment, fileLines) => {
@@ -333,7 +352,7 @@ Now, our parsed comment object looks like this:
 },
 ```
 
-And that brings us to the end! 
+And that brings us to the end!
 
 If you're interested in playing around with the code, [here](https://repl.it/@Ilya_Meer/ShrillArtisticMetric#index.js)'s a Repl!
 
@@ -341,7 +360,7 @@ As long as we have files with comments, our parser should give us a nice list of
 
 Our implementation has some limitations - it's not able to parse object destructuring syntax, for example, so `const { hi } = someObject` would parse our variable name to be `{` which is not good.
 
-With the tools we've looked at, the reader should already be able to fix this, and make other improvements to our parsing logic. 
+With the tools we've looked at, the reader should already be able to fix this, and make other improvements to our parsing logic.
 
 Finally, if you want to use this in your project, here's the complete [package](https://www.npmjs.com/package/inline-comment-parser).
 
