@@ -49,7 +49,8 @@ export const PostContent = styled.div`
     }
   }
 
-  pre {
+  pre,
+  #epigraph {
     border-radius: 5px;
     font-size: 0.8em;
     @media all and (min-width: 800px) {
