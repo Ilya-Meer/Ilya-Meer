@@ -7,7 +7,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import styled from 'styled-components';
 
 const Article = styled.article`
-  margin: 5em 0;
+  margin: 3.5em 0;
 `;
 
 const PostDate = styled.p`
@@ -19,15 +19,19 @@ const PostDate = styled.p`
 
 const PostExcerpt = styled.div`
   padding: 0.25em 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   font-family: ${({ fonts }) => fonts.text};
   color: ${({ colours }) => colours.textContent};
+
+  p {
+    margin: 0;
+  }
 `;
 
 const Heading = styled.h1`
-  margin: 0.25em 0 0.2em 0;
-  font-size: 2.5em;
+  margin: 0.125em 0 0.125em 0;
+  font-size: 1.75em;
   font-family: ${({ fonts }) => fonts.heading};
 `;
 
