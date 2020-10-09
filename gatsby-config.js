@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Ilya Meerovich - Just a dev from Vancouver.`,
     author: `Ilya Meerovich`,
-    description: `Personal site - Ilya Meerovich.`,
-    siteUrl: `http://ilyameerovich.com/`,
+    description: `Ilya Meerovich - Personal Site.`,
+    siteUrl: `https://ilyameerovich.com/`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -55,15 +55,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ilya Meerovich's Site`,
-        short_name: `Ilya's Site`,
-        description: `Ilya's Blog`,
+        name: `Ilya Meerovich`,
+        short_name: `Ilya Meerovich`,
+        description: `Ilya Meerovich's Personal Site`,
         lang: `en`,
         start_url: `/`,
         icon: `content/assets/favicon.png`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
   ],
 };
