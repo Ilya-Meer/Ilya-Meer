@@ -94,6 +94,13 @@ export const PostNav = styled.ul`
   list-style: none;
   padding: 0;
 
+  li:first-of-type {
+    margin-bottom: 1rem;
+    @media all and (min-width: 800px) {
+      margin-bottom: 0;
+    }
+  }
+
   a {
     font-family: ${({ fonts }) => fonts.heading};
     font-size: 1.125em;
