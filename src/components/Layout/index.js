@@ -41,6 +41,7 @@ const Layout = ({ children, location }) => {
               rel="noopener noreferrer"
               colours={colours}
               href="https://github.com/Ilya-Meer/Ilya-Meer"
+              aria-label="View website source"
             >
               src
             </Anchor>
