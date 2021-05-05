@@ -4,7 +4,7 @@ date: '2020-10-09T06:37:29.077Z'
 description: "During the pandemic I've had more time, not less, to spend on personal projects. Previously..."
 ---
 
-<div id="epigraph" style="width: 75%; margin: 0 0 0 auto; text-align: right; font-family: 'Source Sans Pro', Arial, monospace;">
+<div id="epigraph" style="width: 75%; margin: 0 0 0 auto; text-align: right; font-family: 'IBM Plex Sans', Arial, monospace;">
 
 <span>That buck that bought a bottle could've struck the lotto</span>
 

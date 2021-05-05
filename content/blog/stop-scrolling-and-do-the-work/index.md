@@ -4,7 +4,7 @@ date: '2020-06-15T00:31:58.119Z'
 description: 'Occasionally, in a moment of dazed wonder...'
 ---
 
-<div id="epigraph" style="width: 75%; margin: 0 0 0 auto; text-align: right; font-family: 'Source Sans Pro', Arial, monospace;">
+<div id="epigraph" style="width: 75%; margin: 0 0 0 auto; text-align: right; font-family: 'IBM Plex Sans', Arial, monospace;">
 
 <span>Naturally, we thought an Italian-American Canadian Eatery would be the answer to our hangovers. Naturally it was not. Just bad linguine and Bellinis and more lessons taught but unlearned.</span>
 

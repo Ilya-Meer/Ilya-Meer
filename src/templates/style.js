@@ -4,13 +4,14 @@ export const Heading = styled.h1`
   margin: 0;
   font-size: 2.5em;
   font-family: ${({ fonts }) => fonts.heading};
+  font-weight: 400;
   color: ${({ colours }) => colours.postTitle};
 `;
 
 export const PostDate = styled.p`
   font-family: ${({ fonts }) => fonts.heading};
   color: ${({ colours }) => colours.textContent};
-  font-size: 0.875em;
+  font-size: 1rem;
   margin-top: 0.5em;
   margin-bottom: 2.5em;
 `;
@@ -27,6 +28,7 @@ export const PostContent = styled.div`
   h5,
   h6 {
     color: ${({ colours }) => colours.postTitle};
+    font-family: ${({ fonts }) => fonts.heading};
   }
 
   p,
@@ -68,6 +70,10 @@ export const PostContent = styled.div`
     font-size: 16px;
     color: ${({ colours }) => colours.textContent};
     background: ${({ colours }) => colours.codeElBackground};
+  }
+
+  p {
+    margin: 1.75rem 0;
   }
 
   img {

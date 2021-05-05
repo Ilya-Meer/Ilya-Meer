@@ -30,7 +30,7 @@ const themes = {
     },
   },
   fonts: {
-    text: `${'Source Sans Pro'}, Arial, Helvetica, sans-serif`,
+    text: `${'IBM Plex Sans'}, Arial, Helvetica, sans-serif`,
     heading: `${'Oswald'}, Arial, Helvetica, sans-serif`
   }
 }

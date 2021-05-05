@@ -5,7 +5,7 @@ const CSSReset = createGlobalStyle`
  * Import Google Font
  */
 
-  @import url('https://fonts.googleapis.com/css?family=Oswald:200,300|Source+Sans+Pro:200,300,400&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700|Oswald:400,700&display=swap');
 
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

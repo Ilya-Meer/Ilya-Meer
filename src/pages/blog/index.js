@@ -12,7 +12,7 @@ const Article = styled.article`
 
 const PostDate = styled.p`
   font-family: ${({ fonts }) => fonts.heading};
-  font-size: 0.875em;
+  font-size: 1rem;
   margin-top: 0.5em;
   color: ${({ colours }) => colours.textContent};
 `;
@@ -32,6 +32,7 @@ const PostExcerpt = styled.div`
 const Heading = styled.h1`
   margin: 0.125em 0 0.125em 0;
   font-size: 1.75em;
+  font-weight: 400;
   font-family: ${({ fonts }) => fonts.heading};
 `;
 

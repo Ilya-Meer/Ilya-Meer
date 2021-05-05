@@ -5,7 +5,7 @@ description: "A post by a Russian Instagrammer showed up on my feed the other da
 ---
 
 <div style="text-align: right;">
-<pre id="epigraph" style="font-family: 'Source Sans Pro', Arial, monospace;">... The motive for metaphor, shrinking from
+<pre id="epigraph" style="font-family: 'IBM Plex Sans', Arial, monospace;">... The motive for metaphor, shrinking from
 The weight of primary noon,
 The A B C of being... 
 
