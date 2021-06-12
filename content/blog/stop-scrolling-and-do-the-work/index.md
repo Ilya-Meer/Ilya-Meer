@@ -26,7 +26,7 @@ So why is this such a common phenomenon?
 
 As Magnus Eriksson puts it in his [take](https://omxi.gitlab.io/2015-06-21-living-with-a-zettelkasten.html#fnref:11) on ['The Collector's Fallacy'](https://zettelkasten.de/posts/collectors-fallacy/):
 
-> Collecting does not transform us and always postpones learning and transformation to the future. Collecting creates debt that we >promise to pay back in some future that never arrives. The collection allow us to imagine ourselves in the near future as a person >who has read and understood the collected material. This makes us feel good. We like that person.
+> Collecting does not transform us and always postpones learning and transformation to the future. Collecting creates debt that we promise to pay back in some future that never arrives. The collection allow us to imagine ourselves in the near future as a person who has read and understood the collected material. This makes us feel good. We like that person.
 
 I think the same can be said about superficial, passive, skimming of internet resources as well, as long as it isn't in the service of solving a very specific, well-defined problem, as mentioned above.
 
