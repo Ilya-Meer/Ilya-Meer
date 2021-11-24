@@ -74,6 +74,7 @@ export const PostContent = styled.div`
 
   p {
     margin: 1.75rem 0;
+    line-height: 28px;
   }
 
   img {
