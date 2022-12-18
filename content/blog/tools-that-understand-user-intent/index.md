@@ -4,7 +4,6 @@ date: "2022-07-05T19:16:54.425Z"
 description: ""
 ---
 
-
 Some aspects of language learning never get any easier. 
 
 In the beginning you make crude mistakes and people can't understand you. Later on, you make more subtle mistakes and people don't bother to correct you.
