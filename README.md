@@ -10,5 +10,5 @@ Web:  https://ilyameerovich.com
 GitHub:  https://github.com/Ilya-Meer  
 LinkedIn:  https://linkedin.com/in/ilya-meerovich
 
-Card:  `curl -skL https://0x0.st/Nlpk`
+Card:  `curl -skL https://tinyurl.com/ilyameer`
 
