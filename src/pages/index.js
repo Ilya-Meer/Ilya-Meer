@@ -19,7 +19,7 @@ const Home = ({ location, data }) => {
       <div>
         <Canvas
           config={{
-            width: window.innerWidth,
+            width: '100vw',
             height: 600,
             strokeColour,
             bgColour,
