@@ -3,8 +3,8 @@ import { StyledCanvas } from './style';
 import { createNoise2D } from 'simplex-noise';
 
 let yOff = 0.0;
-let xIncrement = 0.03;
-let yIncrement = 0.01;
+let xIncrement = 0.05;
+let yIncrement = 0.012;
 
 const draw = ({ canvas, ctx, noise, strokeColour }) => {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
