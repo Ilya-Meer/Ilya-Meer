@@ -30,7 +30,7 @@ const Header = props => {
       {!isHomePage && (
         <HomeLinkWrapper isBlogPostPage={isBlogPostPage}>
           <InternalLink fonts={fonts} colours={colours} to="/">
-            Home
+            IM
           </InternalLink>
         </HomeLinkWrapper>
       )}
