@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Ilya Meerovich - Just a dev from Vancouver.`,
+    title: `Ilya Meerovich`,
     author: `Ilya Meerovich`,
-    description: `Ilya Meerovich - Personal Site.`,
+    description: `Hi there! I'm Ilya Meerovich, a software engineer based in Vancouver, BC.`,
     siteUrl: `https://ilyameerovich.com/`,
   },
   plugins: [
