@@ -20,8 +20,8 @@ const themes = {
     colours: {
       accent: '#fe74ba',
       blockQuote: '#e14594',
-      hyperlink: '#00ACC1',
-      hyperlinkHover: '#B2EBF2',
+      hyperlink: '#B2EBF2',
+      hyperlinkHover: '#00ACC1',
       navLink: '#21e6c1',
       navLinkHover: '#0aeec3',
       postTitle: '#e14594',
