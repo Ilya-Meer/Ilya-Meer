@@ -1,4 +1,11 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const SelectionStyle = css`
+  ::selection {
+    color: ${({ colours }) => colours.selectionColour};
+    background: ${({ colours }) => colours.selectionBackground};
+  }
+`;
 
 const fadeIn = keyframes`
   from {
@@ -26,12 +33,14 @@ export const StyledWrapper = styled.div`
     font-size: 18px;
     font-family: ${({ fonts }) => fonts.text};
     font-weight: 400;
+    ${SelectionStyle};
   }
 
   p {
     font-size: 18px;
     font-family: ${({ fonts }) => fonts.text};
     color: ${({ colours }) => colours.textContent};
+    ${SelectionStyle};
   }
 
   a {
@@ -39,5 +48,6 @@ export const StyledWrapper = styled.div`
     &:hover {
       color: ${({ colours }) => colours.hyperlinkHover};
     }
+    ${SelectionStyle};
   }
 `;

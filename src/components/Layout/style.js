@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const SelectionStyle = css`
+  ::selection {
+    color: ${({ colours }) => colours.selectionColour};
+    background: ${({ colours }) => colours.selectionBackground};
+  }
+`;
 
 export const Anchor = styled.a`
   margin: 0 5px;
@@ -18,6 +25,9 @@ export const BodyWrapper = styled.main`
   max-width: ${({ isHomePage }) => (isHomePage ? 'none' : '42rem')};
   margin: ${({ isHomePage }) => (isHomePage ? '0' : '5rem auto')};
   min-height: 65vh;
+
+  *${SelectionStyle};
+
   @media all and (min-width: 800px) {
     width: auto;
   }
@@ -32,6 +42,9 @@ export const Footer = styled.footer`
   padding: 1.75rem 0;
   font-family: ${({ fonts }) => fonts.heading};
   color: ${({ colours }) => colours.textContent};
+
+  *${SelectionStyle};
+
   @media all and (min-width: 800px) {
     max-width: 42rem;
   }

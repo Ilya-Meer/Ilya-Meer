@@ -1,6 +1,13 @@
 import { Link } from 'gatsby';
 import styled, { css, keyframes } from 'styled-components';
 
+const SelectionStyle = css`
+  ::selection {
+    color: ${({ colours }) => colours.selectionColour};
+    background: ${({ colours }) => colours.selectionBackground};
+  }
+`;
+
 const LinkStyles = css`
   position: relative;
   text-decoration: none;
@@ -81,6 +88,8 @@ export const Nav = styled.nav`
   padding: 2em 0 0 0;
   opacity: ${({ isHomePage }) => (isHomePage ? 0 : 1)};
   animation: ${({ isHomePage }) => (isHomePage ? animationMixin : 'none')};
+
+  *${SelectionStyle};
 `;
 
 export const LinkList = styled.ul`

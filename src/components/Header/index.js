@@ -27,7 +27,7 @@ const Header = props => {
   const isHomePage = location.pathname === '/';
 
   const renderHeader = () => (
-    <Nav isHomePage={isHomePage}>
+    <Nav isHomePage={isHomePage} colours={colours}>
       <HomeLinkWrapper>
         <InternalLink fonts={fonts} colours={colours} to="/" aria-label="home">
           <span>IM</span>
