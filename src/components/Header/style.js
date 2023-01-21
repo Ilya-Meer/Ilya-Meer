@@ -8,14 +8,33 @@ const LinkStyles = css`
   font-size: 20px;
   font-weight: 300;
   color: ${({ colours }) => colours.navLink};
+
+  .link-icon {
+    position: relative;
+    top: 2px;
+  }
+
+  .link-text {
+    display: none;
+  }
+
+  @media all and (min-width: 450px) {
+    .link-icon {
+      display: none;
+    }
+
+    .link-text {
+      display: inline;
+    }
+  }
 `;
 
 const LinkPseudo = css`
   content: '';
-  height: 2px;
-  width: 55%;
+  height: 1px;
+  width: 75%;
   position: absolute;
-  bottom: -7px;
+  bottom: -2px;
   left: 50%;
   transform: translate(-50%);
   display: block;
@@ -27,14 +46,14 @@ const LinkPseudo = css`
 
 const LinkPseudoHover = css`
   content: '';
-  height: 2px;
-  width: 55%;
+  height: 1px;
+  width: 75%;
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   display: block;
   background-color: ${({ colours }) => colours.navLinkHover};
   opacity: 1;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-in-out;
 `;
 
 export const fadeIn = keyframes`
@@ -52,23 +71,16 @@ const animationMixin = css`
 
 export const Nav = styled.nav`
   display: flex;
-  flex-direction: ${({ isBlogPostPage }) =>
-    isBlogPostPage ? 'column' : 'row'};
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   z-index: 10;
   align-items: center;
-  width: ${({ isHomePage }) => (isHomePage ? '100%' : '80%')};
+  width: 80%;
   margin: 0 auto;
   padding: 2em 0 0 0;
   opacity: ${({ isHomePage }) => (isHomePage ? 0 : 1)};
   animation: ${({ isHomePage }) => (isHomePage ? animationMixin : 'none')};
-  @media all and (min-width: 450px) {
-    width: 80%;
-    flex-direction: row;
-    justify-content: ${({ isHomePage }) =>
-      isHomePage ? 'flex-end' : 'space-between'};
-  }
 `;
 
 export const LinkList = styled.ul`
@@ -80,9 +92,14 @@ export const LinkList = styled.ul`
   list-style: none;
 
   li {
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 5px;
     position: relative;
+
+    &:last-of-type {
+      margin-right: 0;
+      padding-right: 0;
+    }
   }
 `;
 
@@ -107,9 +124,8 @@ export const InternalLink = styled(Link)`
 `;
 
 export const HomeLinkWrapper = styled.div`
-  margin: 0 10px;
-  padding: 5px;
-  padding-bottom: ${({ isBlogPostPage }) => (isBlogPostPage ? '2rem' : '5px')};
+  margin: 0;
+  padding: 5px 0;
   @media all and (min-width: 450px) {
     margin: 0;
     padding: 0;

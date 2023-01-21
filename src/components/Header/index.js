@@ -1,4 +1,8 @@
 import React, { useContext } from 'react';
+import { FiGithub } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { BsPen } from 'react-icons/bs';
+
 import { ThemeContext } from '../../contexts/ThemeContext';
 import ThemeToggle from '../../components/ThemeToggle';
 
@@ -21,27 +25,28 @@ const Header = props => {
   const { location } = props;
 
   const isHomePage = location.pathname === '/';
-  const isBlogPage = location.pathname.includes('/blog');
-
-  const isBlogPostPage = !isHomePage && !isBlogPage;
 
   const renderHeader = () => (
-    <Nav isHomePage={isHomePage} isBlogPostPage={isBlogPostPage}>
-      {!isHomePage && (
-        <HomeLinkWrapper isBlogPostPage={isBlogPostPage}>
-          <InternalLink fonts={fonts} colours={colours} to="/">
-            IM
-          </InternalLink>
-        </HomeLinkWrapper>
-      )}
+    <Nav isHomePage={isHomePage}>
+      <HomeLinkWrapper>
+        <InternalLink fonts={fonts} colours={colours} to="/" aria-label="home">
+          <span>IM</span>
+        </InternalLink>
+      </HomeLinkWrapper>
       <LinkList>
-        {!isBlogPage && (
-          <li>
-            <InternalLink fonts={fonts} colours={colours} to="/blog">
-              Blog
-            </InternalLink>
-          </li>
-        )}
+        <li>
+          <InternalLink
+            fonts={fonts}
+            colours={colours}
+            to="/blog"
+            aria-label="blog"
+          >
+            <span class="link-text">Blog</span>
+            <span class="link-icon">
+              <BsPen />
+            </span>
+          </InternalLink>
+        </li>
         <li>
           <StyledLink
             colours={colours}
@@ -49,8 +54,12 @@ const Header = props => {
             href="https://github.com/Ilya-Meer/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="github"
           >
-            Github
+            <span class="link-text">Github</span>
+            <span class="link-icon">
+              <FiGithub />
+            </span>
           </StyledLink>
         </li>
         <li>
@@ -60,8 +69,12 @@ const Header = props => {
             href="https://www.linkedin.com/in/ilya-meerovich/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="linkedin"
           >
-            LinkedIn
+            <span class="link-text">LinkedIn</span>
+            <span class="link-icon">
+              <FaLinkedinIn />
+            </span>
           </StyledLink>
         </li>
         <li>
