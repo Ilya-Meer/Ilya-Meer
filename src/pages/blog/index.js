@@ -32,7 +32,7 @@ const PostExcerpt = styled.div`
 const Heading = styled.h1`
   margin: 0.125em 0 0.125em 0;
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 600;
   font-family: ${({ fonts }) => fonts.heading};
 `;
 

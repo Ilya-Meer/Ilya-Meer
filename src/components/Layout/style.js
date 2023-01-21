@@ -16,8 +16,8 @@ export const IconWrapper = styled.div`
 export const BodyWrapper = styled.main`
   width: 80%;
   max-width: ${({ isHomePage }) => (isHomePage ? 'none' : '42rem')};
-  margin: ${({ isHomePage }) => (isHomePage ? 0 : '5rem auto')};
-  min-height: ${({ isHomePage }) => (isHomePage ? 0 : '65vh')};
+  margin: ${({ isHomePage }) => (isHomePage ? '0' : '5rem auto')};
+  min-height: 65vh;
   @media all and (min-width: 800px) {
     width: auto;
   }

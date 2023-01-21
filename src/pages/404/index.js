@@ -15,6 +15,7 @@ const ContentWrapper = styled.div`
 const Heading = styled.h1`
   font-size: 2.5em;
   font-family: ${({ fonts }) => fonts.heading};
+  font-weight: 600;
   color: ${({ colours }) => colours.textContent};
 `;
 

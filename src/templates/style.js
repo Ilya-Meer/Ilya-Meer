@@ -4,7 +4,7 @@ export const Heading = styled.h1`
   margin: 0;
   font-size: 2.5em;
   font-family: ${({ fonts }) => fonts.heading};
-  font-weight: 400;
+  font-weight: 600;
   color: ${({ colours }) => colours.postTitle};
 `;
 
@@ -12,7 +12,7 @@ export const PostDate = styled.p`
   font-family: ${({ fonts }) => fonts.heading};
   color: ${({ colours }) => colours.textContent};
   font-size: 1rem;
-  margin-top: 0.5em;
+  margin-top: 0;
   margin-bottom: 2.5em;
 `;
 

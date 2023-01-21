@@ -1,22 +1,26 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
+import Header from '../components/Header';
 import SEO from '../components/SEO';
+import Bio from '../components/Bio';
 import Canvas from '../components/Canvas';
 import { ThemeContext } from '../contexts/ThemeContext';
+import useBodyToggle from '../utils/useBodyToggle';
 
-const Home = ({ location, data }) => {
-  const { theme, darkEnabled } = useContext(ThemeContext);
-  const { pageBackground: bgColour } = theme.colours;
+
+const Home = ({ location }) => {
+  const { theme: { colours }, darkEnabled } = useContext(ThemeContext);
+  const { pageBackground: bgColour } = colours;
   const strokeColour = darkEnabled ? '#fff' : '#000';
 
-  const siteTitle = data.site.siteMetadata.title;
+  useBodyToggle(colours);
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Fragment>
+      <Header location={location} />
       <SEO title="Home" />
-      <div>
+        <Bio colours={colours} />
         <Canvas
           config={{
             width: '100vw',
@@ -25,8 +29,7 @@ const Home = ({ location, data }) => {
             bgColour,
           }}
         />
-      </div>
-    </Layout>
+    </Fragment>
   );
 };
 
