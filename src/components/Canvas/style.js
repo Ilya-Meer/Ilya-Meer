@@ -11,8 +11,8 @@ const fadeIn = keyframes`
 
 export const StyledCanvas = styled.canvas`
   width: 100vw !important;
-  height: 30vh !important;
-  max-height: 30vh;
+  height: 20vh !important;
+  max-height: 20vh;
   position: absolute !important;
   bottom: 0;
   z-index: 1;
