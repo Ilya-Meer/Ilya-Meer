@@ -41,8 +41,8 @@ const Header = props => {
             to="/blog"
             aria-label="blog"
           >
-            <span class="link-text">Blog</span>
-            <span class="link-icon">
+            <span className="link-text">Blog</span>
+            <span className="link-icon">
               <BsPen />
             </span>
           </InternalLink>
@@ -56,8 +56,8 @@ const Header = props => {
             rel="noopener noreferrer"
             aria-label="github"
           >
-            <span class="link-text">Github</span>
-            <span class="link-icon">
+            <span className="link-text">Github</span>
+            <span className="link-icon">
               <FiGithub />
             </span>
           </StyledLink>
@@ -71,8 +71,8 @@ const Header = props => {
             rel="noopener noreferrer"
             aria-label="linkedin"
           >
-            <span class="link-text">LinkedIn</span>
-            <span class="link-icon">
+            <span className="link-text">LinkedIn</span>
+            <span className="link-icon">
               <FaLinkedinIn />
             </span>
           </StyledLink>
