@@ -10,11 +10,6 @@ const Bio = ({ colours }) => {
       <h1>Hi there!</h1>
       <p>
         I'm Ilya Meerovich, a software engineer based in Vancouver, BC.
-        Currently, I work at{' '}
-        <a target="_blank" rel="noreferrer" href="https://www.coursehero.com">
-          Course Hero
-        </a>
-        , supporting seamless study experiences for students worldwide.
       </p>
       <p>
         Outside of work I enjoy reading, occasionally writing, and learning how
