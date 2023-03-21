@@ -1,12 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const CSSReset = createGlobalStyle`
-/**
- * Import Google Font
- */
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,600;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,400&display=swap');
-
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
