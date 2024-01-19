@@ -70,6 +70,7 @@ Coffee is no different. It's all well and good to dial in your pourover techniqu
 
 ### References
 
-Lindsley, Dan. "HR’s New Why:" Dart Lindsley, https://dartlindsley.com/2021/11/07/hrs-new-why/.
+Brown, Brené. "Clear Is Kind. Unclear Is Unkind". Brené Brown. https://brenebrown.com/articles/2018/10/15/clear-is-kind-unclear-is-unkind/.
 
+Lindsley, Dan. "HR’s New Why:" Dart Lindsley, https://dartlindsley.com/2021/11/07/hrs-new-why/.
 </div>
