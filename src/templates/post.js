@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import { Heading, PostDate, PostContent, PostNav } from './style';
 import { ThemeContext } from '../contexts/ThemeContext';
 
-const BlogPostTemplate = props => {
+const WritingPostTemplate = props => {
   const {
     theme: { colours },
     fonts,
@@ -54,10 +54,10 @@ const BlogPostTemplate = props => {
   );
 };
 
-export default BlogPostTemplate;
+export default WritingPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query WritingPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

@@ -44,7 +44,7 @@ const HeadingLink = styled(Link)`
   }
 `;
 
-const BlogIndex = props => {
+const PostIndex = props => {
   const {
     theme: { colours },
     fonts,
@@ -83,7 +83,7 @@ const BlogIndex = props => {
   );
 };
 
-export default BlogIndex;
+export default PostIndex;
 
 export const pageQuery = graphql`
   query {

@@ -38,10 +38,10 @@ const Header = props => {
           <InternalLink
             fonts={fonts}
             colours={colours}
-            to="/blog"
-            aria-label="blog"
+            to="/writing"
+            aria-label="writing"
           >
-            <span className="link-text">Blog</span>
+            <span className="link-text">Writing</span>
             <span className="link-icon">
               <BsPen />
             </span>
