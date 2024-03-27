@@ -21,8 +21,8 @@ export const IconWrapper = styled.div`
 `;
 
 export const BodyWrapper = styled.main`
-  width: 80%;
-  max-width: ${({ isHomePage }) => (isHomePage ? 'none' : '42rem')};
+  width: ${({ wide }) => (wide ? '100%' : '80%')};
+  max-width: ${({ isHomePage, wide }) => (isHomePage || wide ? 'none' : '42rem')};
   margin: ${({ isHomePage }) => (isHomePage ? '0' : '5rem auto')};
   min-height: 65vh;
 

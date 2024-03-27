@@ -5,7 +5,11 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import useBodyToggle from '../../utils/useBodyToggle';
 import ThemeToggle from '../ThemeToggle';
 
-const Layout = ({ children, location }) => {
+const Layout = ({
+  children,
+  location,
+  wide = false
+}) => {
   const {
     theme: { colours },
     fonts,
@@ -20,11 +24,18 @@ const Layout = ({ children, location }) => {
   return (
     <Fragment>
       <Header location={location} />
-      <BodyWrapper colours={colours} isHomePage={isHomePage}>
+      <BodyWrapper
+        colours={colours}
+        isHomePage={isHomePage}
+        wide={wide}
+      >
         {children}
       </BodyWrapper>
       {!isHomePage && (
-        <Footer colours={colours} fonts={fonts}>
+        <Footer
+          colours={colours}
+          fonts={fonts}
+        >
           <span>
             © {new Date().getFullYear()}.{` `}
             Ilya Meerovich
