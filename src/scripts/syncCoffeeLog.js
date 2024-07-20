@@ -73,7 +73,7 @@ const formatData = data => {
 };
 
 const prepareEnv = () => {
-  console.log('Cretating data directory...')
+  console.log('Creating data directory...')
   fs.mkdirSync(path.dirname(coffeeLogFilePath), { recursive: true });
 
   if (fs.existsSync(coffeeLogFilePath)) {
