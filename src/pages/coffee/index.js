@@ -192,8 +192,10 @@ const Coffee = ({ location, data }) => {
           My current home setup consists of:
           <ul>
             <li>Hario V60-02 - Plastic</li>
+            <li>Timemore B75 Crystal Eye</li>
             <li>Aeropress</li>
-            <li>1Zpresso ZP6 Special grinder</li>
+            <li>1Zpresso ZP6 Special Grinder</li>
+            <li>Hario Buono Drip Kettle - 700ml</li>
           </ul>
         </p>
       </CoffeeLogIntro>
