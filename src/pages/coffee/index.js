@@ -101,18 +101,27 @@ const StyledCard = styled.div`
 `;
 
 const renderOrigin = (originInfo) => {
-  return originInfo.split("\n").map((segment, idx) => {
+  const defaultValues = {
+    Producer: "-/-",
+    Farm: "-/-",
+    Origin: "-/-"
+  }
+
+  const populated = originInfo.split("\n").reduce((acc, segment) => {
     const [field, value] = segment.split(":");
-    return (
-      <div
-        key={field + value + idx}
-        className="field-group"
-      >
-        <span>{field}</span>
-        <span>{value}</span>
-      </div>
-    );
-  });
+      acc[field.trim()] = value.trim();
+      return acc;
+  }, defaultValues)
+
+  return Object.entries(populated).map(([field, value], idx) => (
+    <div
+      key={field + value + idx}
+      className="field-group"
+    >
+      <span>{field}</span>
+      <span>{value}</span>
+    </div>
+  ));
 };
 
 const CoffeeCard = ({ data, fonts, colours }) => {
@@ -167,7 +176,7 @@ const CoffeeCard = ({ data, fonts, colours }) => {
   );
 };
 
-const Coffee = ({ location, data }) => {
+const Coffee = ({ location }) => {
   const {
     theme: { colours },
     fonts,
