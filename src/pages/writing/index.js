@@ -7,31 +7,31 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import styled from 'styled-components';
 
 const Article = styled.article`
-  margin: 3.5em 0;
+  display: flex;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+
+  @media all and (min-width: 800px) {
+    align-items: center;
+  }
 `;
 
 const PostDate = styled.p`
+  margin: 0 1rem 0 0;
+  padding-top: 2px;
+  min-width: 6rem;
   font-family: ${({ fonts }) => fonts.heading};
   font-size: 1rem;
-  margin-top: 0.5em;
-  color: ${({ colours }) => colours.textContent};
-`;
-
-const PostExcerpt = styled.div`
-  padding: 0.25em 0;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: ${({ fonts }) => fonts.text};
   color: ${({ colours }) => colours.textContent};
 
-  p {
-    margin: 0;
+  @media all and (min-width: 800px) {
+    padding-top: 0;
   }
 `;
 
 const Heading = styled.h1`
-  margin: 0.125em 0 0.125em 0;
-  font-size: 1.75em;
+  margin: 0;
+  font-size: 1.25rem;
   font-weight: 600;
   font-family: ${({ fonts }) => fonts.heading};
 `;
@@ -61,21 +61,14 @@ const PostIndex = props => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <Article key={node.fields.slug}>
+            <PostDate colours={colours} fonts={fonts}>
+              {node.frontmatter.date}
+            </PostDate>
             <Heading fonts={fonts}>
               <HeadingLink colours={colours} to={node.fields.slug}>
                 {italicize(title)}
               </HeadingLink>
             </Heading>
-            <PostDate colours={colours} fonts={fonts}>
-              {node.frontmatter.date}
-            </PostDate>
-            <PostExcerpt colours={colours} fonts={fonts}>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </PostExcerpt>
           </Article>
         );
       })}
@@ -100,7 +93,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMM YYYY")
             title
             description
           }
