@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const SelectionStyle = css`
   ::selection {
@@ -7,21 +7,10 @@ const SelectionStyle = css`
   }
 `;
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
 export const StyledWrapper = styled.div`
   width: 80%;
   margin: 5rem auto;
   min-height: 65vh;
-  opacity: 0;
-  animation: ${fadeIn} 1s ease 0.65s 1 normal forwards;
   @media all and (min-width: 800px) {
     width: 100%;
     max-width: 42rem;

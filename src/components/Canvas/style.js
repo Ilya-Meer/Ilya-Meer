@@ -1,13 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import styled from 'styled-components';
 
 export const StyledCanvas = styled.canvas`
   width: 100vw !important;
@@ -17,8 +8,6 @@ export const StyledCanvas = styled.canvas`
   position: absolute !important;
   bottom: 0;
   z-index: 1;
-  opacity: 0;
-  animation: ${fadeIn} 1s ease 0.25s 1 normal forwards;
   @media all and (min-height: 568px) {
     display: block;
   }

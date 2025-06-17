@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const SelectionStyle = css`
   ::selection {
@@ -63,19 +63,7 @@ const LinkPseudoHover = css`
   transition: all 0.2s ease-in-out;
 `;
 
-export const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
 // prettier-ignore
-const animationMixin = css`
-  ${fadeIn} ${'1s ease 0.65s 1 normal forwards'}`;
-
 export const Nav = styled.nav`
   display: flex;
   flex-direction: row;
@@ -86,8 +74,6 @@ export const Nav = styled.nav`
   width: 80%;
   margin: 0 auto;
   padding: 2em 0 0 0;
-  opacity: ${({ isHomePage }) => (isHomePage ? 0 : 1)};
-  animation: ${({ isHomePage }) => (isHomePage ? animationMixin : 'none')};
 
   *${SelectionStyle};
 `;
